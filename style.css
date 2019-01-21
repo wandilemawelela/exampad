@@ -1,0 +1,2 @@
+.preloader_hide {opacity:0;}
+#preloader {position:fixed; left:50%; top:50%; width:32px; height:32px; margin:-16px 0 0 -16px; display:block;}
