@@ -1,0 +1,2007 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exampad</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jqm-demos.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <style type="text/css">
+    	.ui-btn.my-tooltip-btn,
+		.ui-btn.my-tooltip-btn:hover,
+		.ui-btn.my-tooltip-btn:active {
+   		 background: none;
+    	 border: 0;
+	}
+    </style>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/admob_simple.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.easing.min"></script>
+    <script src="js/jquery-1.11.3.min"></script>
+    <script src="js/myscript.js"></script>
+</head>
+<body>
+    <!-- Pre-loader -->
+        <img id="preloader" src="img/preloader.gif" alt="loader" />
+        
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Exampad">
+
+    <div data-role="header">
+        <h1>Exampad</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#popupInfo" data-rel="popup" data-transition="slidedown" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="notext">Info</a>
+        <div data-role="popup" id="popupInfo" class="ui-content" data-theme="a" style="max-width:350px;">
+            <p>Documents you open are automatically stored in Download/Adobe Reader folder on your device.</p>
+        </div>
+    </div>
+
+<div role="main" class="ui-content jqm-content jqm-fullwidth">
+        <form class="ui-filterable">
+                <input id="rich-autocomplete-input" data-type="search" placeholder="GCSE Papers...">
+        </form>
+<ul data-role="listview" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">
+    <li data-filtertext="0452 Accounting Accounts Book-Keeping BK"><a href="#panel-responsive-page4">Accounting</a></li>
+    <li data-filtertext="0606 AS AM Additional Mathematics"><a href="#panel-responsive-page5">Add Maths</a></li>
+    <li data-filtertext="0600 Agriculture"><a href="#panel-responsive-page6">Agriculture</a></li>
+    <li data-filtertext="0610 Biology"><a href="#panel-responsive-page7">Biology</a></li>
+    <li data-filtertext="0450 BS Business Studies"><a href="#panel-responsive-page8">Business Studies</a></li>
+    <li data-filtertext="0653 CS Combined Science"><a href="#panel-responsive-page9">Combined Science</a></li>
+    <li data-filtertext="0420 CS Computer Studies"><a href="#panel-responsive-page10">Computer Studies</a></li>
+    <li data-filtertext="0445 DT D&T DandT Design Technology"><a href="#panel-responsive-page11">Design & Technology</a></li>
+    <li data-filtertext="0453 DS Development Studies"><a href="#panel-responsive-page12">Development Studies</a></li>
+    <li data-filtertext="0455 Economics"><a href="#panel-responsive-page13">Economics</a></li>
+    <li data-filtertext="0511 Singisi English Language EL"><a href="#panel-responsive-page14">English Language</a></li>
+    <li data-filtertext="0460 FF FandF F&F Fashion & Fabrics"><a href="data/fashion_and_fabrics.html">Fashion & Fabrics</a></li>
+    <li data-filtertext="0648 FN FandN F&N Food and Nutrition Food & Nutrition"><a href="#panel-responsive-page15">Food & Nutrition</a></li>
+    <li data-filtertext="0460 Geography"><a href="#panel-responsive-page16">Geography</a></li>
+    <li data-filtertext="0417 IT ICT Information and Communication Technology"><a href="#panel-responsive-page17">ICT</a></li>
+    <li data-filtertext="0580 Tibalo Math Maths Mathematics"><a href="#panel-responsive-page18">Mathematics</a></li>
+    <li data-filtertext="0652 Physics Chemistry Physchem Physical Science"><a href="#panel-responsive-page19">Physical Science</a></li>
+    <li data-filtertext="Siswati"><a href="#panel-responsive-page20">Siswati</a></li>
+</ul>
+</div>
+
+	<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+
+		<ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+            <br />
+            <br />
+            	<li><a href="https://apkpure.com/wps-office-word-docs-pdf-note-slide-sheet/cn.wps.moffice_eng">Install WPS Office</a></li> <!-- Add link here -->
+                <li><a href="data/spc_papers.html">SPC Papers</a></li>
+                <li><a href="data/jc_papers.html">JC Papers</a></li>
+                <li><a href="#panel-responsive-page21">GCSE Books</a></li>
+                <li><a href="#panel-responsive-page22">GCSE Topic Papers</a></li>
+                <li><a href="#panel-responsive-page23">GCSE CD-Resources</a></li>
+                <li><a href="#panel-responsive-page24">Join a GCSE Study Group</a></li>
+                <li><a href="mailto:wandile1997@gmail.com?subject=Contribute&body=I'dLikeToContribute">Contribute</a></li>
+                <li><a href="http://m.facebook.com/exampadapp">Report a bug</a></li>
+                <li><a href="#panel-responsive-page3">App info</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- About app landing page -->
+<div data-role="page" id="panel-responsive-page3">
+
+    <div data-role="header">
+        <h1>App Info</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <br />
+        <br />
+        <p align="center"><img src = "res/xp_logo.png" width ="80px" height = "80px"/></p>
+        <p align="center">Exampad<br />A Smarter Way To Learn.</p>
+        <p align="center">&#149; &#149; &#149;</p>
+        <p align="center">Copyright &copy;2018<br />v3.0.0</p>
+    </div>
+</div><!-- End of app landing page -->
+
+<!-- Subject landing pages -->
+<!-- Accounting papers landing page -->
+<div data-role="page" id="panel-responsive-page4">
+
+    <div data-role="header">
+        <h1>Accounting</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+         
+        <!-- 2017 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_s17_qp_11.pdf" class="ui-btn">2017 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_s17_ms_11.pdf" class="ui-btn">2017 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_s17_qp_21.pdf" class="ui-btn">2017 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_s17_ms_21.pdf" class="ui-btn">2017 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w16_qp_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w16_ms_21.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2013 -->
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w13_qp_13.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Accounting%20(0452)/0452_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2012 -->
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>  
+        <br />
+         
+        <!-- 2011 -->
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2010 -->
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Accounting%20(0452)/0452_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <br />   
+     </div>
+</div>
+<!-- End of Accounting landing page -->
+
+<!-- Add Maths landing page -->
+<div data-role="page" id="panel-responsive-page5">
+
+    <div data-role="header">
+        <h1>Add Maths</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+         
+        <!-- 2017 -->
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_m17_qp_12.pdf" class="ui-btn">2017 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_m17_ms_12.pdf" class="ui-btn">2017 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_m17_qp_22.pdf" class="ui-btn">2017 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_m17_ms_22.pdf" class="ui-btn">2017 Paper 2 MS</a>   
+        <br />
+         
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w16_qp_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w16_ms_21.pdf" class="ui-btn">2016 Paper 6 MS</a>
+        <br />
+         
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>   
+        <br />
+         
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>   
+        <br />
+         
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w12_ms_21.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>   
+        <br />
+         
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+         
+        <!-- 2010 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w10_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20-%20Additional%20(0606)/0606_w10_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+     </div>
+</div><!-- End of Add Maths landing page -->
+
+<!-- Agriculture landing page -->
+<div data-role="page" id="panel-responsive-page6">
+
+    <div data-role="header">
+        <h1>Agriculture</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+         
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+        <br />
+        
+        <!-- 2016 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 MS
+        </div>
+        <br />
+        
+        <!-- 2015 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 MS
+        </div>
+
+        <br />
+        
+        <!-- 2014 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 2 MS
+        </div>
+        <br />
+        
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 2 MS
+        </div>
+        <br />
+        
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 2 MS
+        </div>
+        <br />
+        
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w11_qp_1.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w11_ms_1.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w11_qp_2.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w11_ms_2.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2010 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w10_qp_1.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w10_ms_1.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w10_qp_2.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Agriculture%20(0600)/0600_w10_ms_2.pdf" class="ui-btn">2010 Paper 2 MS</a>
+     </div>
+</div><!-- End of Agriculture landing page -->
+
+<!-- Biology landing page -->
+<div data-role="page" id="panel-responsive-page7">
+
+    <div data-role="header">
+        <h1>Biology</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+         <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+            
+        <!-- 2017 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_qp_12.pdf" class="ui-btn">2017 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_ms_12.pdf" class="ui-btn">2017 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_qp_22.pdf" class="ui-btn">2017 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_ms_22.pdf" class="ui-btn">2017 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_qp_32.pdf" class="ui-btn">2017 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_ms_32.pdf" class="ui-btn">2017 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_qp_42.pdf" class="ui-btn">2017 Paper 4 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_ms_42.pdf" class="ui-btn">2017 Paper 4 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_qp_52.pdf" class="ui-btn">2017 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_ms_52.pdf" class="ui-btn">2017 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_qp_62.pdf" class="ui-btn">2017 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_m17_ms_62.pdf" class="ui-btn">2017 Paper 6 MS</a>
+        <br />
+        
+        <!-- 2016 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_qp_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_ms_21.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_qp_31.pdf" class="ui-btn">2016 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_ms_31.pdf" class="ui-btn">2016 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_qp_41.pdf" class="ui-btn">2016 Paper 4 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_ms_41.pdf" class="ui-btn">2016 Paper 4 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_qp_51.pdf" class="ui-btn">2016 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_ms_51.pdf" class="ui-btn">2016 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_qp_61.pdf" class="ui-btn">2016 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w16_ms_61.pdf" class="ui-btn">2016 Paper 6 MS</a>
+        <br />
+        
+        <!-- 2015 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_qp_31.pdf" class="ui-btn">2015 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_ms_31.pdf" class="ui-btn">2015 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_qp_51.pdf" class="ui-btn">2015 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_ms_51.pdf" class="ui-btn">2015 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_qp_61.pdf" class="ui-btn">2015 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w15_ms_61.pdf" class="ui-btn">2015 Paper 6 MS</a>
+        <br />
+        
+        <!-- 2014 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_qp_31.pdf" class="ui-btn">2014 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_ms_31.pdf" class="ui-btn">2014 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_qp_51.pdf" class="ui-btn">2014 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_ms_51.pdf" class="ui-btn">2014 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_qp_61.pdf" class="ui-btn">2014 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w14_ms_61.pdf" class="ui-btn">2014 Paper 6 MS</a>
+        <br />
+        
+        <!-- 2013 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_qp_31.pdf" class="ui-btn">2013 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_ms_31.pdf" class="ui-btn">2013 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_qp_51.pdf" class="ui-btn">2013 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_ms_51.pdf" class="ui-btn">2013 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_qp_61.pdf" class="ui-btn">2013 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w13_ms_61.pdf" class="ui-btn">2013 Paper 6 MS</a>
+        <br />
+        
+        <!-- 2012 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_qp_31.pdf" class="ui-btn">2012 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_ms_31.pdf" class="ui-btn">2012 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_qp_51.pdf" class="ui-btn">2012 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_ms_51.pdf" class="ui-btn">2012 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_qp_61.pdf" class="ui-btn">2012 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w12_ms_61.pdf" class="ui-btn">2012 Paper 6 MS</a>
+        <br />
+        
+        <!-- 2011 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_ms_13.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_qp_31.pdf" class="ui-btn">2011 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_ms_31.pdf" class="ui-btn">2011 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_qp_51.pdf" class="ui-btn">2011 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_ms_51.pdf" class="ui-btn">2011 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_qp_61.pdf" class="ui-btn">2011 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w11_ms_61.pdf" class="ui-btn">2011 Paper 6 MS</a>
+        <br />
+        
+        <!-- 2010 --> 
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_qp_31.pdf" class="ui-btn">2010 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_ms_31.pdf" class="ui-btn">2010 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_qp_51.pdf" class="ui-btn">2010 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_ms_51.pdf" class="ui-btn">2010 Paper 5 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_qp_61.pdf" class="ui-btn">2010 Paper 6 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Biology%20(0610)/0610_w10_ms_61.pdf" class="ui-btn">2010 Paper 6 MS</a>
+        <br />
+         </div>
+</div><!-- End of Biology landing page -->
+
+<!-- Business Studies landing page -->
+<div data-role="page" id="panel-responsive-page8">
+
+    <div data-role="header">
+        <h1>Business Studies</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+         <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+         
+        <!-- 2017 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_m17_qp_12.pdf" class="ui-btn">2017 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_m17_ms_12.pdf" class="ui-btn">2017 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_m17_qp_22.pdf" class="ui-btn">2017 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_m17_ms_22.pdf" class="ui-btn">2017 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w16_qp_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w16_ms_21.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2013 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2012 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2011 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2010 -->
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Business%20Studies%20(0450)/0450_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+     </div>
+</div><!-- End of Business Studies landing page -->
+
+<!-- Combined Science landing page -->
+<div data-role="page" id="panel-responsive-page9">
+
+    <div data-role="header">
+        <h1>Combined Science</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 5 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 5 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 6 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 6 MS
+        </div>
+        <br />
+        
+        <!-- 2016 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 3 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 5 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 5 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 6 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 6 MS
+        </div>
+        <br />
+       
+        <!-- 2015 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 3 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 5 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 5 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 6 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 6 MS
+        </div>
+        <br />
+     
+    <!-- 2014 -->   
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_qp_31.pdf" class="ui-btn">2014 Paper 3 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_ms_31.pdf" class="ui-btn">2014 Paper 3 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_qp_51.pdf" class="ui-btn">2014 Paper 5 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_ms_51.pdf" class="ui-btn">2014 Paper 5 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_qp_61.pdf" class="ui-btn">2014 Paper 6 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w14_ms_61.pdf" class="ui-btn">2014 Paper 6 MS</a>
+    <br />
+        
+    <!-- 2013 -->   
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_qp_31.pdf" class="ui-btn">2013 Paper 3 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_ms_31.pdf" class="ui-btn">2013 Paper 3 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_qp_51.pdf" class="ui-btn">2013 Paper 5 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_ms_51.pdf" class="ui-btn">2013 Paper 5 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_qp_61.pdf" class="ui-btn">2013 Paper 6 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w13_ms_61.pdf" class="ui-btn">2013 Paper 6 MS</a>
+    <br />
+
+
+      <!-- 2012 -->   
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_qp_31.pdf" class="ui-btn">2012 Paper 3 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_ms_31.pdf" class="ui-btn">2012 Paper 3 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_qp_51.pdf" class="ui-btn">2012 Paper 5 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_ms_51.pdf" class="ui-btn">2012 Paper 5 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_qp_61.pdf" class="ui-btn">2012 Paper 6 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w12_ms_61.pdf" class="ui-btn">2012 Paper 6 MS</a>
+    <br />
+
+     <!-- 2011 -->   
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_qp_31.pdf" class="ui-btn">2011 Paper 3 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_ms_31.pdf" class="ui-btn">2011 Paper 3 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_qp_51.pdf" class="ui-btn">2011 Paper 5 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_ms_51.pdf" class="ui-btn">2011 Paper 5 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_qp_61.pdf" class="ui-btn">2011 Paper 6 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w11_ms_61.pdf" class="ui-btn">2011 Paper 6 MS</a>
+    <br />
+
+     <!-- 2010 -->   
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_qp_31.pdf" class="ui-btn">2010 Paper 3 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_ms_31.pdf" class="ui-btn">2010 Paper 3 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_qp_51.pdf" class="ui-btn">2010 Paper 5 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_ms_51.pdf" class="ui-btn">2010 Paper 5 MS</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_qp_61.pdf" class="ui-btn">2010 Paper 6 QP</a>
+    <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Science%20-%20Combined%20(0653)/0653_w10_ms_61.pdf" class="ui-btn">2010 Paper 6 MS</a>
+    <br />
+    </div>
+</div><!-- End of Combined Science landing page -->
+
+<!-- Computer Studies landing page -->
+<div data-role="page" id="panel-responsive-page10">
+
+    <div data-role="header">
+        <h1>Computer Studies</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <br />
+
+        <!-- 2016 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 MS
+        </div>
+        <br />
+
+        <!-- 2015 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 MS
+        </div>
+        <br />
+
+        <!-- 2014 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <br />
+
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Computer%20Studies%20(0420)/0420_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <br />
+     </div>
+</div><!-- End of Computer Studies landing page -->
+
+<!-- Design and Technology landing page -->
+<div data-role="page" id="panel-responsive-page11">
+
+    <div data-role="header">
+        <h1>Design & Technology</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+         <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_qp_11.pdf" class="ui-btn">2017 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_ms_11.pdf" class="ui-btn">2017 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_qp_21.pdf" class="ui-btn">2017 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_ms_21.pdf" class="ui-btn">2017 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_qp_31.pdf" class="ui-btn">2017 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_ms_31.pdf" class="ui-btn">2017 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_qp_42.pdf" class="ui-btn">2017 Paper 4 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_s17_ms_42.pdf" class="ui-btn">2017 Paper 4 MS</a>
+        <br />
+
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_qp_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_ms_21.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_qp_31.pdf" class="ui-btn">2016 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_ms_31.pdf" class="ui-btn">2016 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_qp_41.pdf" class="ui-btn">2016 Paper 4 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w16_ms_41.pdf" class="ui-btn">2016 Paper 4 MS</a>
+        <br />
+
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_qp_31.pdf" class="ui-btn">2015 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_ms_31.pdf" class="ui-btn">2015 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_qp_43.pdf" class="ui-btn">2015 Paper 4 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w15_ms_43.pdf" class="ui-btn">2015 Paper 4 MS</a>
+        <br />
+
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_qp_31.pdf" class="ui-btn">2014 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_ms_31.pdf" class="ui-btn">2014 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_qp_43.pdf" class="ui-btn">2014 Paper 4 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Design%20and%20Technology%20(0445)/0445_w14_ms_43.pdf" class="ui-btn">2014 Paper 4 MS</a>
+        <br />
+
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_qp_31.pdf" class="ui-btn">2013 Paper 3 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_ms_31.pdf" class="ui-btn">2013 Paper 3 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_qp_41.pdf" class="ui-btn">2013 Paper 4 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w13_ms_41.pdf" class="ui-btn">2013 Paper 4 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_qp_31.pdf" class="ui-btn">2012 Paper 3 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_ms_31.pdf" class="ui-btn">2012 Paper 3 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_qp_41.pdf" class="ui-btn">2012 Paper 4 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w12_ms_41.pdf" class="ui-btn">2012 Paper 4 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_qp_31.pdf" class="ui-btn">2011 Paper 3 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_ms_31.pdf" class="ui-btn">2011 Paper 3 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_qp_41.pdf" class="ui-btn">2011 Paper 4 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w11_ms_41.pdf" class="ui-btn">2011 Paper 4 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_qp_31.pdf" class="ui-btn">2010 Paper 3 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_ms_31.pdf" class="ui-btn">2010 Paper 3 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_qp_41.pdf" class="ui-btn">2010 Paper 4 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Design%20and%20Technology%20(0445)/0445_w10_ms_41.pdf" class="ui-btn">2010 Paper 4 MS</a>
+        <br />
+         </div>
+</div><!-- End of Design and Technology landing page -->
+
+<!-- Development Studies landing page -->
+<div data-role="page" id="panel-responsive-page12">
+
+    <div data-role="header">
+        <h1>Development Studies</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+         <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+        <br />
+        
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w16_qp_1.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w16_ms_1.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w16_qp_2.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w16_ms_2.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <br />
+
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w15_qp_1.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w15_ms_1.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w15_qp_2.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w15_ms_2.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <br />
+
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w14_qp_1.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w14_ms_1.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w14_qp_2.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w14_ms_2.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <br />
+
+        <!-- 2013 -->
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w13_qp_1.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w13_ms_1.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w13_qp_2.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w13_ms_2.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w12_qp_1.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w12_ms_1.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w12_qp_2.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w12_ms_2.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w11_qp_1.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w11_ms_1.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w11_qp_2.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w11_ms_2.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w10_qp_1.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w10_ms_1.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w10_qp_2.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Development%20Studies%20(0453)/0453_w10_ms_2.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <br />
+     </div>
+</div><!-- End of Development Studies landing page -->
+
+
+<!-- Economics landing page -->
+<div data-role="page" id="panel-responsive-page13">
+
+    <div data-role="header">
+        <h1>Economics</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_m17_qp_12.pdf" class="ui-btn">2017 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_m17_ms_12.pdf" class="ui-btn">2017 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_m17_qp_22.pdf" class="ui-btn">2017 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_m17_ms_22.pdf" class="ui-btn">2017 Paper 2 MS</a>
+        <br />
+        
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s16_qp_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s16_ms_21.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <br />
+
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <br />
+
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Economics%20(0455)/0455_s14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <br />
+
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Economics%20(0455)/0455_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <br />
+     </div>
+</div><!-- Economics landing page -->
+
+
+<!-- English Language landing page -->
+<div data-role="page" id="panel-responsive-page14">
+
+    <div data-role="header">
+        <h1>English Language</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+        <br />
+         
+        <!-- 2016 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2015 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2014 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 1 MS
+        </div>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s14_ms_11.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/English%20-%20Second%20Language%20(count-in%20oral)%20(0511)/0511_s11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 2 MS
+        </div>
+        <br />
+     </div>
+</div><!-- English Language landing page -->
+
+<!-- Food and Nutrition landing page -->
+<div data-role="page" id="panel-responsive-page15">
+
+    <div data-role="header">
+        <h1>Food & Nutrition</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+        <br />
+        
+        <!-- 2016 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2015 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2014 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 1 MS
+        </div>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w13_qp_2.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 2 MS
+        </div>
+        <br />
+
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w11_qp_1.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w11_ms_1.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w11_qp_2.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w11_ms_2.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w10_qp_1.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w10_ms_1.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w10_qp_2.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Food%20and%20Nutrition%20(0648)/0648_w10_ms_2.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <br />
+     </div>
+</div><!-- End of Food & Nutrition landing page -->
+
+
+<!-- Geography landing page -->
+<div data-role="page" id="panel-responsive-page16">
+
+    <div data-role="header">
+        <h1>Geography</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        
+        <!-- 2017 -->
+         <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+        <br />
+        
+
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s16_ms_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s16_qp_21.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <br />
+
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <br />
+
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Geography%20(0460)/0460_s14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <br />
+
+        <!-- 2013 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Geography%20(0460)/0460_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <br />
+     </div>
+</div><!-- End of Geography landing page -->
+
+
+<!-- ICT landing page -->
+<div data-role="page" id="panel-responsive-page17">
+
+    <div data-role="header">
+        <h1>ICT</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_m17_qp_12.pdf" class="ui-btn">2017 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_m17_ms_12.pdf" class="ui-btn">2017 Paper 1 MS</a>
+        <br />
+        
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <br />
+
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <br />
+
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <br />
+
+        <!-- 2013 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Information%20and%20Communication%20Technology%20(0417)/0417_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <br />  
+     </div>
+</div><!-- End of ICT landing page -->
+
+<!-- Maths landing page -->
+<div data-role="page" id="panel-responsive-page18">
+
+    <div data-role="header">
+        <h1>Mathematics</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 MS
+        </div>
+        <br />
+         
+        <!-- 2016 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2015 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2014 -->
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_qp_31.pdf" class="ui-btn">2014 Paper 3 (Core) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_ms_31.pdf" class="ui-btn">2014 Paper 3 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_qp_41.pdf" class="ui-btn">2014 Paper 4 (Extended) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w14_ms_41.pdf" class="ui-btn">2014 Paper 4 MS</a>
+            <br />
+        
+            <!--2013-->
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_qp_31.pdf" class="ui-btn">2013 Paper 3 (Core) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_ms_31.pdf" class="ui-btn">2013 Paper 3 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_qp_41.pdf" class="ui-btn">2013 Paper 4 (Extended) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w13_ms_41.pdf" class="ui-btn">2013 Paper 4 MS</a>
+            <br />
+            
+            <!--2012-->
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_qp_31.pdf" class="ui-btn">2012 Paper 3 (Core) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_ms_31.pdf" class="ui-btn">2012 Paper 3 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_qp_41.pdf" class="ui-btn">2012 Paper 4 (Extended) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w12_ms_41.pdf" class="ui-btn">2012 Paper 4 MS</a>
+            <br />
+        
+            <!--2011-->
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_qp_31.pdf" class="ui-btn">2011 Paper 3 (Core) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_ms_31.pdf" class="ui-btn">2011 Paper 3 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_qp_41.pdf" class="ui-btn">2011 Paper 4 (Extended) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w11_ms_41.pdf" class="ui-btn">2011 Paper 4 MS</a>
+            <br />
+        
+            <!--2010-->
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_qp_11.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_ms_11.pdf" class="ui-btn">2010 Paper 1 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_qp_21.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_ms_21.pdf" class="ui-btn">2010 Paper 2 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_qp_31.pdf" class="ui-btn">2010 Paper 3 (Core) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_ms_31.pdf" class="ui-btn">2010 Paper 3 MS</a>
+            <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_qp_41.pdf" class="ui-btn">2010 Paper 4 (Extended) QP</a>
+        <a href="http://papers.xtremepapers.com/CIE/Cambridge%20IGCSE/Mathematics%20(0580)/0580_w10_ms_41.pdf" class="ui-btn">2010 Paper 4 MS</a>
+         </div>
+</div><!-- End of Maths landing page -->
+
+<!-- Physical Science landing page -->
+<div data-role="page" id="panel-responsive-page19">
+
+    <div data-role="header">
+        <h1>Physical Science</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+         <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+
+        <!-- 2017 -->
+         <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+         <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 MS
+        </div>
+         <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 5 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 5 MS
+        </div>
+        <br />
+        
+        <!-- 2016 -->
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_qp_11.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_ms_11.pdf" class="ui-btn">2016 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_qp_21.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_ms_21.pdf" class="ui-btn">2016 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_qp_31.pdf" class="ui-btn">2016 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_ms_31.pdf" class="ui-btn">2016 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_qp_51.pdf" class="ui-btn">2016 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w16_ms_51.pdf" class="ui-btn">2016 Paper 5 MS</a>
+        <br />
+
+        <!-- 2015 -->
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_qp_11.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_ms_11.pdf" class="ui-btn">2015 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_qp_21.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_ms_21.pdf" class="ui-btn">2015 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_qp_31.pdf" class="ui-btn">2015 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_ms_31.pdf" class="ui-btn">2015 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_qp_51.pdf" class="ui-btn">2015 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w15_ms_51.pdf" class="ui-btn">2015 Paper 5 MS</a>
+        <br />
+
+        <!-- 2014 -->
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_qp_11.pdf" class="ui-btn">2014 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_ms_11.pdf" class="ui-btn">2014 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_qp_21.pdf" class="ui-btn">2014 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_ms_21.pdf" class="ui-btn">2014 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_qp_31.pdf" class="ui-btn">2014 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_ms_31.pdf" class="ui-btn">2014 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_qp_51.pdf" class="ui-btn">2014 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w14_ms_51.pdf" class="ui-btn">2014 Paper 5 MS</a>
+        <br />
+
+        <!-- 2013 -->
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_qp_11.pdf" class="ui-btn">2013 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_ms_11.pdf" class="ui-btn">2013 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_qp_21.pdf" class="ui-btn">2013 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_ms_21.pdf" class="ui-btn">2013 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_qp_31.pdf" class="ui-btn">2013 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_ms_31.pdf" class="ui-btn">2013 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_qp_51.pdf" class="ui-btn">2013 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w13_ms_51.pdf" class="ui-btn">2013 Paper 5 MS</a>
+        <br />
+
+        <!-- 2012 -->
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_qp_11.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_ms_11.pdf" class="ui-btn">2012 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_qp_21.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_ms_21.pdf" class="ui-btn">2012 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_qp_31.pdf" class="ui-btn">2012 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_ms_31.pdf" class="ui-btn">2012 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_qp_51.pdf" class="ui-btn">2012 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w12_ms_51.pdf" class="ui-btn">2012 Paper 5 MS</a>
+        <br />
+
+        <!-- 2011 -->
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_qp_11.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_ms_11.pdf" class="ui-btn">2011 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_qp_21.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_ms_21.pdf" class="ui-btn">2011 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_qp_31.pdf" class="ui-btn">2011 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_ms_31.pdf" class="ui-btn">2011 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_qp_51.pdf" class="ui-btn">2011 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w11_ms_51.pdf" class="ui-btn">2011 Paper 5 MS</a>
+        <br />
+
+        <!-- 2010 -->
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_qp_1.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_ms_1.pdf" class="ui-btn">2010 Paper 1 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_qp_2.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_ms_2.pdf" class="ui-btn">2010 Paper 2 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_qp_3.pdf" class="ui-btn">2010 Paper 3 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_ms_3.pdf" class="ui-btn">2010 Paper 3 MS</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_qp_5.pdf" class="ui-btn">2010 Paper 5 QP</a>
+        <a href="https://papers.gceguide.com/IGCSE/Physical%20Science%20(0652)/0652_w10_ms_5.pdf" class="ui-btn">2010 Paper 5 MS</a>
+        <br />
+        </div>
+</div><!-- End of Physical Science landing page -->
+
+<!-- Siswati landing page -->
+<div data-role="page" id="panel-responsive-page20">
+
+    <div data-role="header">
+        <h1>Siswati</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        
+        <!-- 2017 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 2 MS
+        </div>
+		<div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2017 Paper 3 MS
+        </div>
+        <br />
+        
+        <!-- 2016 -->
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1502117315.pdf" class="ui-btn">2016 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 1 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1502117713.pdf" class="ui-btn">2016 Paper 2 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 2 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1502118083.pdf" class="ui-btn">2016 Paper 3 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2016 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2015 -->
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1501506948.pdf" class="ui-btn">2015 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 1 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1501507200.pdf" class="ui-btn">2015 Paper 2 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 2 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1501507751.pdf" class="ui-btn">2015 Paper 3 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2015 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2014 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 2 MS
+        </div>
+		<div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2014 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2013 -->
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 1 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 1 MS
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 2 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 2 MS
+        </div>
+		<div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2013 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2012 -->
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493900701.pdf" class="ui-btn">2012 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 1 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493900953.pdf" class="ui-btn">2012 Paper 2 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 2 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493901306.pdf" class="ui-btn">2012 Paper 3 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2012 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2011 -->
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493900617.pdf" class="ui-btn">2011 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2011 Paper 1 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493900895.pdf" class="ui-btn">2011 Paper 2 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2011 Paper 2 MS
+        </div>
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493901207.pdf" class="ui-btn">2011 Paper 3 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2011 Paper 3 MS
+        </div>
+        <br />
+
+        <!-- 2010 -->
+        <a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493900563.pdf" class="ui-btn">2010 Paper 1 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 1 MS
+        </div>
+		<a href="http://mtneducare.co.sz/administrator/exampapers/exams/1493900830.pdf" class="ui-btn">2010 Paper 2 QP</a>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 2 MS
+        </div>
+		<div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 3 QP
+        </div>
+        <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">2010 Paper 3 MS
+        </div>
+        <br />
+    </div>
+</div><!-- End of Siswati landing page -->
+
+<!-- Books & Study Guides landing page -->
+<div data-role="page" id="panel-responsive-page21">
+
+    <div data-role="header">
+        <h1>Books & Study Guides</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="http://www.gceguide.com/Books/Cambridge%20IGCSE%20and%20International%20Certificate%20French%20Foreign%20Language.pdf" class="ui-btn">French - Cambridge IGCSE and International Certificate French Foreign Language by Yvette Grime & Jayn Witt</a>
+        <a href="https://www.gceguide.com/e-books/cambridge-igcse-modern-world-history/" class="ui-btn">History - Cambridge IGCSE Modern World History by Michael Scott-Baumann, Ben Walsh
+        </a>
+        <a href="https://www.gceguide.com/e-books/cambridge-igcse-mathematics-core-and-extended-3ed/" class="ui-btn">Mathematics - Cambridge IGCSE Mathematics Core and Extended 3ed by Ric Pimentel, Terry Wall</a>
+        <a href="https://www.gceguide.com/e-books/cambridge-igcse-geography-2nd-edition/" class="ui-btn">Geography - Cambridge IGCSE Geography 2nd Edition by Paul Guinness, Garrett Nagle</a>
+        <a href="https://www.gceguide.com/e-books/cambridge-igcse-english-second-language/" class="ui-btn">English - Cambridge IGCSE English as a second language by John Reynolds</a>
+        <a href="https://www.gceguide.com/e-books/cambridge-igcse-business-studies-4th-edition/" class="ui-btn">Business Studies - Cambridge IGCSE Business Studies 4th edition by Peter Stimpson, Karen Borrington</a>
+        <a href="https://www.gceguide.com/wp-content/uploads/2015/05/Cambridge-IGCSE-Biology-3rd-Edition-.pdf" class="ui-btn">Biology - Cambridge IGCSE Biology 3rd Edition by D G Mackean and Dave Hayward</a>
+        <a href="https://www.gceguide.com/Books/ebs/Cambridge%20IGCSE%20Physics%20(3rd%20edition)%20by%20Tom%20Duncan%20and%20Heather%20Kennett.pdf" class="ui-btn">Physics - Cambridge IGCSE Physics (3rd edition) by Tom Duncan and Heather Kennett</a>
+        <a href="https://www.gceguide.com/Books/ebs/Cambridge%20IGCSE%20Chemistry%20by%20Bryan%20Earl%20and%20Doug%20Wilford.pdf" class="ui-btn">Chemistry - Cambridge IGCSE Chemistry by Bryan Earl and Doug Wilford</a>
+        <a href="https://www.gceguide.com/Books/ebs/IGCSE%20Study%20Guide%20For%20Chemistry.pdf" class="ui-btn">Chemistry Study Guide by Bob Berry</a>
+        <a href="https://www.gceguide.com/Books/ebs/e-books/igcse-study-guide-for-business-studies.pdf" class="ui-btn">Business Studies Study Guide by Karen Borrington & Peter Stimpson</a>
+        <a href="https://www.gceguide.com/Books/ebs/IGCSE%20English%20as%20a%20Second%20Language%20(Alison%20Digger).pdf" class="ui-btn">IGCSE English as a Second Language by Ailson Digger</a>
+        <a href="https://www.gceguide.com/Books/ebs/e-books/xtmaths.pdf" class="ui-btn">Ext. Mathematics for IGCSE by David Rayner</a>
+            </div>
+</div><!-- End of Books & Study Guides landing page -->
+        
+<!-- Topic past papers landing page -->
+<div data-role="page" id="panel-responsive-page22">
+
+    <div data-role="header">
+        <h1>Topic Past Papers</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="https://www.gceguide.com/wp-content/uploads/2015/06/English-language-1123_Directed-writing-Topics.pdf" class="ui-btn">English Language 1123 (Directed Writing Topics) by Rizwan Javed</a>
+        <a href="http://www.gceguide.com/Books/tpp/Math-Classified-IGCSE.pdf" class="ui-btn">IGCSE Mathematics 0580 Topical Past Papers by  Muhammad Maaz Rashid</a>
+        <a href="https://www.gceguide.com/wp-content/uploads/2015/06/CHEMISTRY-CLASSIFIED-P1.pdf" class="ui-btn">IGCSE Chemistry P1 Topical Past Papers by Teacher Hakim Abbas Ali (M.Sc.)</a>
+        <a href="http://www.gceguide.com/Books/tpp/Physics-Classified-Paper-1.pdf" class="ui-btn">IGCSE Physics P1 Topical Past Papers by Teacher Hakim Abbas Ali (M.Sc.) & Muhammad Maaz Rashid</a>
+        <a href="https://www.gceguide.com/wp-content/uploads/2015/06/CHEMISTRY-CLASSIFIED-PAPER-3.pdf" class="ui-btn">IGCSE Chemistry P3 Topical Past Papers by Teacher Hakim Abbas Ali (M.Sc.)</a>
+        <a href="https://www.gceguide.com/wp-content/uploads/2015/06/IGCSE-Physics-Paper-3-Classified.pdf" class="ui-btn">IGCSE Physics P3 Topical Past Papers by Teacher Hakim Abbas Ali (M.Sc.)</a>
+        <a href="http://www.gceguide.com/Books/tpp/Classified-ICT.pdf" class="ui-btn">IGCSE Information and Communication Technology P1 Topical Past Papers by Rizwan Javed & Muhammad Maaz Rashid</a>
+        <a href="https://www.gceguide.com/Books/tpp/0610%20Biology%20Paper%203%20Topical%20Papers%20(2003-2015).zip" class="ui-btn">IGCSE Biology P3 Topical Past Papers (2003-2015) by Yousef Shahiology</a>
+    </div>
+</div><!-- End of Topic Past Papers landing page -->
+
+<!-- CD-Resources landing page -->
+<div data-role="page" id="panel-responsive-page23">
+
+    <div data-role="header">
+        <h1>CD-Resources</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="https://www.mediafire.com/download/mb3ddcateyrxmex/IGCSE+ICT.rar" class="ui-btn">IGCSE Information and Communication Technology 0417 by Graham Brown and David Watson [CD-ROM]</a>
+    </div>
+</div><!-- End of CD-Resources Page landing page -->
+
+<!-- WhatsApp study groups landing page -->
+<div data-role="page" id="panel-responsive-page24">
+
+    <div data-role="header">
+        <h1>Join a Form 5 Study Group</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+         <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+            <a href="https://chat.whatsapp.com/FDpW43q4Eu69991XC38oLG" class="ui-btn">Accounting</a>
+            <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">Add Maths
+        	</div>
+            <a href="https://chat.whatsapp.com/7z1SrLxqL7qHQbLLNYpvK2" class="ui-btn">Agriculture</a>
+            <a href="https://chat.whatsapp.com/EvMQkRAdZ8GGHOjGjdxYwC" class="ui-btn">Biology</a>
+            <a href="https://chat.whatsapp.com/EHcJCFVPgZc9LIczfHmkaQ" class="ui-btn">Business Studies</a>
+            <a href="https://chat.whatsapp.com/ArmA9ffTN0cGIjBKOqbiwF" class="ui-btn">Chemistry</a>
+            <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">Combined Science
+        	</div>
+            <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">Computer Studies
+        	</div>
+			<div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">Design & Technology
+        	</div>
+			<div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">Development Studies
+        	</div>
+            <a href="https://chat.whatsapp.com/4EzYMIyQROA8GCnpOHTFvX" class="ui-btn">Economics</a>
+            <a href="https://chat.whatsapp.com/HzkPlcer33TE99NZjrVrMR" class="ui-btn">English Language</a>
+            <div class="ui-input-btn ui-btn ui-state-disabled">
+               <input type="button" disabled="" data-enhanced="true" value="Enhanced">Food & Nutrition
+        	</div>
+            <a href="https://chat.whatsapp.com/K9JIlBONRFQ58mNjSvwhZF" class="ui-btn">French</a>
+            <a href="https://chat.whatsapp.com/FAJ56eIFJ0WKE15smXnjuz" class="ui-btn">Geography</a>
+            <a href="https://chat.whatsapp.com/IY6hJ1Kwlv20cnsTl2naBr" class="ui-btn">ICT</a>
+            <a href="https://chat.whatsapp.com/68Le9ypN3npIQEPeQtP2fp" class="ui-btn">Mathematics</a>
+            <a href="https://chat.whatsapp.com/9T6FODmoYQx2Oq04JmQ8Hv" class="ui-btn">Physical Science</a>
+            <a href="https://chat.whatsapp.com/JsEJ99wlsyKBEkrUkNZxMr" class="ui-btn">SiSwati</a>
+    </div>
+</div><!-- End of WhatsApp study groups landing page -->
+
+<!-- UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page25">
+
+    <div data-role="header">
+        <h1>UNISWA Past Papers</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page1" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="#panel-responsive-page26" class="ui-btn">Agriculture</a>
+        <a href="#panel-responsive-page27" class="ui-btn">Commerce</a>
+        <a href="#panel-responsive-page28" class="ui-btn">Education</a>
+        <a href="#panel-responsive-page29" class="ui-btn">Health Science</a>
+        <a href="#panel-responsive-page30" class="ui-btn">Humanities</a>
+        <a href="#panel-responsive-page31" class="ui-btn">Science</a>
+        <a href="#panel-responsive-page32" class="ui-btn">Social Science</a>
+    </div>
+</div><!-- End of UNISWA Papers landing page -->
+
+<!-- Agriculture UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page26">
+
+    <div data-role="header">
+        <h1>Agriculture</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page25" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="data/agricultural_education.html" class="ui-btn">Agricultural Education</a>
+        <a href="data/agricultural_economics.html" class="ui-btn">Agricultural Economics</a>
+        <a href="data/animal_production.html" class="ui-btn">Animal Production/Animal Science</a>
+        <a href="data/crop_production.html" class="ui-btn">Crop Production</a>
+        <a href="data/home_economics.html" class="ui-btn">Home Economics/Consumer Science</a>
+        <a href="data/land_use_and_mech_biosysystems_engineering.html" class="ui-btn">Land use & Mech./Biosysystems Engineering</a>
+        <a href="data/horticulture.html" class="ui-btn">Horticulture</a>
+    </div>
+</div><!-- End Agriculture UNISWA Papers landing page -->
+
+<!-- Commerce UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page27">
+
+    <div data-role="header">
+        <h1>Commerce</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page25" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="data/accounting.html" class="ui-btn">Accounting</a>
+        <a href="data/business_administration.html" class="ui-btn">Business Administration</a>
+    </div>
+</div><!-- End Commerce UNISWA Papers landing page -->
+
+<!-- Education UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page28">
+
+    <div data-role="header">
+        <h1>Education</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page25" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="data/adult_education.html" class="ui-btn">Adult Education</a>
+        <a href="data/education_complete.html" class="ui-btn">Education Complete</a>
+    </div>
+</div><!-- End Education UNISWA Papers landing page -->
+
+<!-- Health Science UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page29">
+
+    <div data-role="header">
+        <h1>Health Science</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+         <a href="#panel-responsive-page25" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+            <a href="data/community_health_nursing_science.html" class="ui-btn">Community Health Nursing Science</a>
+            <a href="data/enviromental_health_science.html" class="ui-btn">Enviromental Health Science</a>
+            <a href="data/general_nursing.html" class="ui-btn">General Nursing</a>
+            <a href="data/midwifery_science.html" class="ui-btn">Midwifery Science</a>
+        </div>
+</div><!-- End Health Science UNISWA Papers landing page -->
+
+<!-- Humanities UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page30">
+
+    <div data-role="header">
+        <h1>Humanities</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page25" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="data/african_lit_and_languages.html" class="ui-btn">African Lit. & Languages</a>
+        <a href="data/english_lit_and_languages.html" class="ui-btn">English Lit. & Languages</a>
+        <a href="data/journalism_and_mass_communication.html" class="ui-btn">Journalism & Mass Communication</a>
+        <a href="data/history.html" class="ui-btn">History</a>
+        <a href="data/french_modern_languages.html" class="ui-btn">French - Modern Languages</a>
+        <a href="data/portugese_modern_languages.html" class="ui-btn">Portugese - Modern Languages</a>
+        <a href="data/theology_and_religious_studies.html" class="ui-btn">Theology and Religious Studies</a>
+    </div>
+</div><!-- End Humanities UNISWA Papers landing page -->
+
+<!-- Science UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page31">
+
+    <div data-role="header">
+        <h1>Science</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page25" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="data/biological_science.html" class="ui-btn">Biological Science</a>
+        <a href="data/chemistry.html" class="ui-btn">Chemistry</a>
+        <a href="data/geography_enviromental_science.html" class="ui-btn">Geography - Enviromental Science</a>
+        <a href="data/mathematics.html" class="ui-btn">Mathematics</a>
+        <a href="data/computer_science.html" class="ui-btn">Computer Science</a>
+        <a href="data/electronic_engineering.html" class="ui-btn">Electronic Engineering</a>
+    </div>
+</div><!-- End Science UNISWA Papers landing page -->
+
+<!-- Social Science UNISWA Papers landing page -->
+<div data-role="page" id="panel-responsive-page32">
+
+    <div data-role="header">
+        <h1>Social Science</h1>
+    </div>
+
+    <div role="main" class="ui-content jqm-content">
+        <a href="#panel-responsive-page25" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a>
+        <a href="data/economics.html" class="ui-btn">Economics</a>
+        <a href="data/law.html" class="ui-btn">Law</a>
+        <a href="data/political_and_admin_studies.html" class="ui-btn">Political & Admin. Studies</a>
+        <a href="data/sociology.html" class="ui-btn">Sociology</a>
+        <a href="data/statistics_and_demography.html" class="ui-btn">Statistics & Demography</a>
+        <a href="data/mathematics_for_social_science.html" class="ui-btn">Mathematics for Social Science</a>
+        <a href="data/socialwork_psychological_support.html" class="ui-btn">Social Work & Psychological Support</a>
+    </div>
+</div><!-- End Social Science UNISWA Papers landing page -->
+        
+</body>
+</html>

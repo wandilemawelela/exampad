@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "com.wandilemawelela.exampad"
+        version = "3.0.0" >
+    
+<name>
+    Exampad
+</name>
+
+    <description>
+        Free IGCSE Educational Resources App for Android.
+    </description>
+    
+        <author href="https://www.facebook.com/exampadapp" email="wandile1997@gmail.com">
+            Wandile Mawelela
+        </author>
+         
+                <access origin="https://facebook.com/*" launch-external="yes" />
+                <access origin="http://papers.xtremepapers.com/*" launch-external="yes" />
+                <access origin="http://www.xtremepapers.com/*" launch-external="yes" />
+                <access origin="http://www.datafilehost.com/*" launch-external="yes" />
+                <access origin="http://www.acrobat.com/*" launch-external="yes" />
+                <access origin="https://www.mediafire.com/*" launch-external="yes" />
+                <access origin="https://www.gceguide.com/*" launch-external="yes" />
+                <access origin="https://papers.gceguide.com/*" launch-external="yes" />
+                <access origin="https://bit.ly/*" launch-external="yes" />
+
+                    <platform name="android" />
+                                
+                    <preference name="orientation" value="default"/>
+                    <preference name="permissions" value="none"/>
+                    <preference name="KeepRunning" value="true"/>
+                    <preference name="fullscreen" value="false"/>
+					
+            <plugin name="cordova-plugin-x-socialsharing" source="npm" />
+            <plugin name="cordova-plugin-inappbrowser" source="npm" />
+            <plugin name="cordova-plugin-whitelist" source="npm" />
+            
+
+                
+<icon src="res/icon/android/mipmap-ldpi/ic_launcher.png" gap:platform="android" gap:qualifier="ldpi" />
+<icon src="res/icon/android/mipmap-mdpi/ic_launcher.png" gap:platform="android" gap:qualifier="mdpi" />
+<icon src="res/icon/android/mipmap-hdpi/ic_launcher.png" gap:platform="android" gap:qualifier="hdpi" />
+<icon src="res/icon/android/mipmap-xhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xhdpi" />
+<icon src="res/icon/android/mipmap-xxhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xxhdpi" />
+    
+ </widget>
